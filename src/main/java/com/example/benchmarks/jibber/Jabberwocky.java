@@ -62,7 +62,7 @@ public class Jabberwocky {
 
     private void loadModel() {
         //
-        String text = "’Twas brillig, and the slithy toves " +
+        String text = "Twas brillig, and the slithy toves " +
                 "Did gyre and gimble in the wabe:" +
                 "All mimsy were the borogoves, " +
                 "And the mome raths outgrabe. " +
@@ -86,7 +86,7 @@ public class Jabberwocky {
                 "Come to my arms, my beamish boy! " +
                 "O frabjous day! Callooh! Callay!” " +
                 "He chortled in his joy. " +
-                "’Twas brillig, and the slithy toves " +
+                "Twas brillig, and the slithy toves " +
                 "Did gyre and gimble in the wabe: " +
                 "All mimsy were the borogoves, " +
                 "And the mome raths outgrabe.";

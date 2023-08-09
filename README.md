@@ -36,11 +36,11 @@ If you would like to run this demo using [BuildPacks](https://docs.spring.io/spr
 
 3. Download the demos repository or clone it as follows:
     ```bash
-    git clone https://github.com/graalvm/graalvm-demos
+    git clone https://github.com/root4j/gvm_jibber.git
     ```
 4. Change directory to the demo subdirectory:
     ```bash
-    cd spring-native-image
+    cd gvm_jibber
     ```
 ## Build and Run as a JAR
 
@@ -141,7 +141,7 @@ If you are using macOS or Windows, to build a Docker image containing your nativ
 
 If you are a Linux user, you can easily containerise the native executable using the following command:
 ```shell
-docker build -f Dockerfiles/Dockerfile.native --build-arg APP_FILE=benchmark-jibber -t jibber-benchmark:native.0.0.1-SNAPSHOT .
+podman build -f Dockerfiles/Dockerfile.native --build-arg APP_FILE=benchmark-jibber -t jibber-benchmark:native.0.0.1-SNAPSHOT .
 ```
 
 Once that is built, you can test it as follows:
@@ -152,14 +152,14 @@ docker run --rm --name native -d -p 8080:8080 jibber-benchmark:native.0.0.1-SNAP
 
 If you are not using Linux as your operating system, you need to build the native executable within a Docker container. To do this we provided a two-stage Docker build file. 
 
-1. Run this command to build the native executable within a Docker container:
+1. Run this command to build the native executable within a Podman container:
     ```shell
-    docker build -f Dockerfiles/Dockerfile -t jibber-benchmark:native.0.0.1-SNAPSHOT .
+    podman build -f Dockerfiles/Dockerfile -t jibber-benchmark:native.0.0.1-SNAPSHOT .
     ```
 
 2. Once that is built, you can test it as follows:
     ```shell
-    docker run --rm --name native -d -p 8080:8080 jibber-benchmark:native.0.0.1-SNAPSHOT
+    podman run --rm --name native -d -p 8080:8080 jibber-benchmark:native.0.0.1-SNAPSHOT
     ```
 ## Measure the Performance of the Application and Metrics
 
